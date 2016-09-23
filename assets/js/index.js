@@ -22,13 +22,16 @@ $(document).ready(function() {
 
 	$("#play").click(function() {
 		SC.stream('/tracks/' + ids[i]).then(function(player){
+			outerPlayer = player;
+
 	  		player.play();
+
 		});
 	});
 
 	$("#pause").click(function() {
 		SC.stream('/tracks/' + ids[i]).then(function(player) {
-			player.pause();
+			outerPlayer.pause();
 		});
 		
 	});
@@ -38,7 +41,7 @@ $(document).ready(function() {
 			SC.stream('/tracks/' + ids[i]).then(function(player){
 	  		player.play();
 			});
-			i = i +1;
+			i = i + 1;
 			console.log(i);
 
 		} else {
