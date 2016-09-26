@@ -1,0 +1,43 @@
+body, html {
+    text-align: center;
+    height: 100%;
+    font-family: courier;
+}
+
+
+header {
+    font-size: 150px;
+    text-align: center;
+    color: white;
+    padding: 275px;
+}
+
+.parallax1 {
+    background-image: url("../images/one.jpg");
+
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2 {
+    background-image: url("../images/two.jpg");
+
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body {
+    padding: 150px;
+    text-align: center;
+    height: 400px;
+    background-color: black;
+    font-size: 50px;
+    
+}
