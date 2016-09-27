@@ -2,6 +2,7 @@ body, html {
     text-align: center;
     height: 100%;
     font-family: courier;
+    background-color: rosybrown;
 }
 
 
@@ -9,21 +10,11 @@ header {
     font-size: 150px;
     text-align: center;
     color: white;
-    padding: 275px;
+    padding: 250px;
 }
 
 .parallax1 {
     background-image: url("../images/one.jpg");
-
-    height: 100%;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.parallax2 {
-    background-image: url("../images/two.jpg");
 
     height: 100%;
 
@@ -40,4 +31,21 @@ header {
     background-color: black;
     font-size: 50px;
     
+}
+
+.parallax2 {
+    background-image: url("../images/two.jpg");
+
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link {
+    padding: 50px;
+    font-size: 50px;
+    color: white;
 }
