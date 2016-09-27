@@ -7,7 +7,7 @@ $(document).ready(function() {
   	$("#search_button").click(function() {
   		var searchValue = $("#search").val();
 
-  		SC.get('/tracks', {
+  		SC.get('/tracks/', {
   			q: searchValue, license: 'cc-by-sa'
 			}).then(function(tracks) {
 				ids = tracks.map(function(track) {
@@ -21,7 +21,7 @@ $(document).ready(function() {
   	i = 0;
 
 	$("#play").click(function() {
-		SC.stream('/tracks' + ids[i]).then(function(player){
+		SC.stream('/tracks/' + ids[i]).then(function(player){
 			outerPlayer = player;
 
 	  		player.play();
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	});
 
 	$("#pause").click(function() {
-		SC.stream('/tracks' + ids[i]).then(function(player) {
+		SC.stream('/tracks/' + ids[i]).then(function(player) {
 			outerPlayer.pause();
 		});
 		
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 	$("#next").click(function() {
 		if (i < ids.length) {
-			SC.stream('/tracks' + ids[i]).then(function(player){
+			SC.stream('/tracks/' + ids[i]).then(function(player){
 	  		player.play();
 			});
 			i = i + 1;
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
 		$("#back").click(function() {
 		if (i > ids.length) {
-			SC.stream('/tracks' + ids[i]).then(function(player){
+			SC.stream('/tracks/' + ids[i]).then(function(player){
 	  		player.play();
 			});
 			i = i - 1;
